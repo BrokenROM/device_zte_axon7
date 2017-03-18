@@ -33,9 +33,31 @@ PRODUCT_PACKAGES += \
  PRODUCT_PACKAGES += \
 	keyhandler
 
-<<<<<<< HEAD
-$(call inherit-product-if-exists, vendor/zte/axon7/axon7-vendor.mk)
-=======
+# For android_filesystem_config.h
+PRODUCT_PACKAGES += \
+    fs_config_files
+
+# GPS
+PRODUCT_PACKAGES += \
+    gps.msm8996 \
+    libcurl \
+    libgnsspps
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/gps/etc/flp.conf:system/etc/flp.conf \
+    $(LOCAL_PATH)/gps/etc/gps.conf:system/etc/gps.conf \
+    $(LOCAL_PATH)/gps/etc/izat.conf:system/etc/izat.conf \
+    $(LOCAL_PATH)/gps/etc/sap.conf:system/etc/sap.conf \
+    $(LOCAL_PATH)/gps/etc/xtwifi.conf:system/etc/xtwifi.conf
+
+# IRQ balance
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
+
+# IRSC
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
+
 # Keylayouts
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/synaptics_dsx.idc:system/usr/idc/synaptics_dsx.idc \
@@ -148,4 +170,3 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wcnss/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini
 
 $(call inherit-product, frameworks/native/build/phone-xxxhdpi-4096-hwui-memory.mk)
->>>>>>> 1ce6f90... axon7: Enforce vendor tree presence

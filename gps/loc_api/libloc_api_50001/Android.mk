@@ -80,9 +80,6 @@ LOCAL_SHARED_LIBRARIES := \
     libdl \
     libloc_pla
 
-ifneq ($(filter $(TARGET_DEVICE), apq8084 msm8960), false)
-endif
-
 LOCAL_SRC_FILES += \
     loc.cpp \
     gps.c
