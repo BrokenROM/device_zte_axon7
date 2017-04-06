@@ -1,7 +1,7 @@
 # Camera
 PRODUCT_PACKAGES += \
     libshim_camera \
-    Snap
+    SnapdragonCamera
 
 # Permissions
 PRODUCT_COPY_FILES += \

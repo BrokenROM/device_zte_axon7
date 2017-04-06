@@ -20,4 +20,15 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Include package config fragments
 include $(LOCAL_PATH)/product/*.mk
 
+# Extras
+PRODUCT_PACKAGES += \
+    SnapdragonCamera \
+    SnapdragonMusic \
+    SoundRecorder \
+    SnapdragonGallery
+
+# Keyhandler
+ PRODUCT_PACKAGES += \
+	keyhandler
+
 $(call inherit-product-if-exists, vendor/zte/axon7/axon7-vendor.mk)
