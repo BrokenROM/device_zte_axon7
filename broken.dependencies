@@ -25,7 +25,7 @@
   },
   {
     "remote":       "github",
-    "repository":   "TheMuppets/proprietary_vendor_zte",
+    "repository":   "C457/proprietary_vendor_zte",
     "target_path":  "vendor/zte",
     "branch":       "cm-14.1"
   },
@@ -34,5 +34,23 @@
     "repository":   "Seraph08/hardware_cyanogen",
     "target_path":  "hardware/cyanogen",
     "branch":       "nougat"
+  },
+  {
+    "remote":       "github",
+    "repository":   "Seraph08/android_packages_apps_SnapdragonCamera",
+    "target_path":  "packages/apps/SnapdragonCamera",
+    "branch":       "n-mr1"
+  },
+  {
+    "remote":       "github",
+    "repository":   "Seraph08/platform_packages_apps_SnapdragonMusic",
+    "target_path":  "packages/apps/SnapdragonMusic",
+    "branch":       "nougat-msm8996"
+  },
+    {
+    "remote":       "github",
+    "repository":   "Seraph08/platform_packages_apps_SnapdragonGallery",
+    "target_path":  "packages/apps/SnapdragonGallery",
+    "branch":       "nougat-msm8996"
   }
 ]
